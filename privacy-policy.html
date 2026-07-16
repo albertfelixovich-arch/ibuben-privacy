@@ -3,26 +3,33 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy Policy and support information for iBuben Keyboard.">
   <title>iBuben Keyboard Privacy Policy</title>
   <style>
     :root {
       color-scheme: light dark;
-      --background: #f7f8fb;
-      --surface: #ffffff;
-      --text: #15171c;
-      --muted: #5d6573;
-      --border: #d8dde7;
-      --accent: #155bd5;
+      --background: #f5f3fb;
+      --surface: rgba(255, 255, 255, 0.94);
+      --surface-soft: #f6f2ff;
+      --text: #17151d;
+      --muted: #5e5968;
+      --border: #ded8ea;
+      --accent: #6b38d1;
+      --accent-soft: #eee5ff;
+      --shadow: 0 16px 48px rgba(45, 24, 86, 0.08);
     }
 
     @media (prefers-color-scheme: dark) {
       :root {
-        --background: #101217;
-        --surface: #191c23;
-        --text: #f3f5f8;
-        --muted: #b8bfca;
-        --border: #303642;
-        --accent: #82aaff;
+        --background: #100e16;
+        --surface: rgba(27, 24, 35, 0.96);
+        --surface-soft: #24202e;
+        --text: #f6f3fa;
+        --muted: #c4bdcf;
+        --border: #3b3448;
+        --accent: #b894ff;
+        --accent-soft: #2d2340;
+        --shadow: none;
       }
     }
 
@@ -30,41 +37,65 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      background: var(--background);
+      background:
+        radial-gradient(circle at top left, rgba(107, 56, 209, 0.11), transparent 34rem),
+        var(--background);
       color: var(--text);
-      font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
     main {
-      width: min(900px, calc(100% - 32px));
+      width: min(920px, calc(100% - 32px));
       margin: 0 auto;
-      padding: 48px 0;
+      padding: 56px 0 72px;
     }
 
+    header,
     section {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 28px;
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    header {
+      padding: clamp(28px, 6vw, 52px);
+    }
+
+    section {
+      padding: clamp(24px, 5vw, 40px);
       margin-top: 24px;
     }
 
     h1,
-    h2 {
+    h2,
+    h3 {
       line-height: 1.2;
-      margin: 0;
+      margin-top: 0;
     }
 
     h1 {
-      font-size: clamp(32px, 5vw, 48px);
-      letter-spacing: 0;
+      max-width: 720px;
+      margin-bottom: 16px;
+      font-size: clamp(34px, 6vw, 54px);
+      letter-spacing: -0.035em;
     }
 
     h2 {
-      font-size: 24px;
-      margin-bottom: 14px;
+      margin-bottom: 26px;
+      font-size: clamp(25px, 4vw, 34px);
+      letter-spacing: -0.02em;
+    }
+
+    h3 {
+      margin-bottom: 8px;
+      font-size: 19px;
     }
 
     p,
@@ -72,57 +103,249 @@
       color: var(--muted);
     }
 
+    p {
+      margin: 0 0 14px;
+    }
+
+    ul {
+      margin: 10px 0 22px;
+      padding-left: 24px;
+    }
+
+    li + li {
+      margin-top: 8px;
+    }
+
     a {
       color: var(--accent);
+      text-underline-offset: 3px;
+    }
+
+    .eyebrow,
+    .language-label {
+      margin-bottom: 10px;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 750;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
 
     .meta {
-      margin-top: 14px;
+      margin: 0;
       color: var(--muted);
     }
 
-    .language-label {
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 10px;
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .summary-item {
+      min-height: 112px;
+      padding: 16px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--surface-soft);
+      color: var(--muted);
+    }
+
+    .summary-item strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--text);
+    }
+
+    .policy-item + .policy-item {
+      padding-top: 24px;
+      margin-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+
+    .contact-card {
+      padding: 20px;
+      margin-top: 24px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--accent-soft);
+    }
+
+    .contact-card p:last-child,
+    .policy-item p:last-child {
+      margin-bottom: 0;
+    }
+
+    footer {
+      padding: 28px 8px 0;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+    }
+
+    @media (max-width: 720px) {
+      main {
+        padding-top: 24px;
+      }
+
+      .summary {
+        grid-template-columns: 1fr;
+      }
+
+      .summary-item {
+        min-height: auto;
+      }
     }
   </style>
 </head>
 <body>
   <main>
     <header>
-      <div class="language-label">Beta Privacy</div>
-      <h1>iBuben Keyboard Privacy Policy</h1>
-      <p class="meta">Effective date: July 4, 2026</p>
-      <p class="meta">Contact: <a href="mailto:ibuben.support@gmail.com">ibuben.support@gmail.com</a></p>
+      <div class="eyebrow">iBuben Keyboard</div>
+      <h1>Privacy Policy</h1>
+      <p class="meta">Effective date: July 17, 2026</p>
+
+      <div class="summary" aria-label="Privacy summary">
+        <div class="summary-item">
+          <strong>Your typing stays private</strong>
+          Keyboard input and learned words remain on your device.
+        </div>
+        <div class="summary-item">
+          <strong>No tracking or advertising</strong>
+          iBuben does not use advertising, tracking, or third-party analytics SDKs.
+        </div>
+        <div class="summary-item">
+          <strong>Support is your choice</strong>
+          Contact information is sent only when you choose to submit feedback or ask for help.
+        </div>
+      </div>
+
+      <div class="contact-card" id="support">
+        <h3>Support</h3>
+        <p>For questions, feedback, or data-deletion requests, email <a href="mailto:ibuben.support@gmail.com">ibuben.support@gmail.com</a>.</p>
+      </div>
     </header>
 
     <section aria-labelledby="english-policy">
       <div class="language-label">English</div>
       <h2 id="english-policy">Privacy Policy</h2>
-      <p>iBuben Keyboard does not collect, sell, or share your personal data.</p>
-      <p>The keyboard may store learned words and preferences locally on your device to improve typing suggestions. This data is used only to improve your keyboard experience.</p>
-      <p>If Full Access is enabled, iBuben Keyboard does not transmit what you type to our servers.</p>
-      <p>Full Access is used for shared app and keyboard settings, such as reading preferences configured in the companion app.</p>
-      <p>We do not use tracking technologies or analytics tools that collect your personal information.</p>
-      <p>You can delete learned words and reset keyboard data at any time in the app settings.</p>
-      <p>If you have any questions, contact us at <a href="mailto:ibuben.support@gmail.com">ibuben.support@gmail.com</a>.</p>
+
+      <div class="policy-item">
+        <h3>1. Scope</h3>
+        <p>This Privacy Policy explains how iBuben Keyboard handles information in the iBuben companion app and its keyboard extension.</p>
+      </div>
+
+      <div class="policy-item">
+        <h3>2. Keyboard input and local data</h3>
+        <p>iBuben does not collect or transmit what you type, your keystroke history, or the contents of text fields. Learned words, words you add manually, word-use counts, preferences, and keyboard settings are stored locally on your device or in the local shared container used by the companion app and keyboard extension.</p>
+        <p>You can remove learned and manually added words from within the app.</p>
+      </div>
+
+      <div class="policy-item">
+        <h3>3. Full Access</h3>
+        <p>Full Access is used to share settings and locally stored dictionary data between the companion app and keyboard extension and to enable the keyboard's full functionality, including haptic feedback. Enabling Full Access does not cause iBuben to transmit what you type to us.</p>
+      </div>
+
+      <div class="policy-item">
+        <h3>4. Feedback and contact information</h3>
+        <p>If you choose to send feedback or contact support from the app, iBuben collects the information you submit: your name, email address, feedback category, message, app language and version, and any image you choose to attach. Because these items are submitted together, they may be linked to your identity.</p>
+        <p>This information is used only to deliver and respond to your request, diagnose the issue you report, maintain the security and reliability of the support channel, and prevent abuse. It is not used for advertising, marketing, analytics, profiling, or tracking.</p>
+        <p>Support submissions are routed through Google Apps Script and Google's email services so that we can receive and reply to them. Google processes this information as a service provider under its <a href="https://policies.google.com/privacy" rel="noopener noreferrer">Privacy Policy</a>.</p>
+      </div>
+
+      <div class="policy-item">
+        <h3>5. Photos and videos</h3>
+        <p>iBuben does not scan or upload your photo library. If you attach an image to a support request, only the image you explicitly select is included with that request. Saving an iBuben image to your Photos library is performed locally on your device and is not a data collection event.</p>
+      </div>
+
+      <div class="policy-item">
+        <h3>6. Purchases and subscriptions</h3>
+        <p>Purchases and subscriptions are processed by Apple through StoreKit. iBuben may receive purchase and entitlement status needed to unlock premium features, but we do not receive your payment card, bank account, or other payment credentials. Apple's handling of purchase information is governed by <a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer">Apple's Privacy Policy</a>.</p>
+      </div>
+
+      <div class="policy-item">
+        <h3>7. Advertising, analytics, and tracking</h3>
+        <p>iBuben does not display third-party advertising, does not sell personal information, and does not use third-party analytics or tracking SDKs. Information submitted for support is not combined with data from other companies for advertising or tracking.</p>
+      </div>
+
+      <div class="policy-item">
+        <h3>8. Retention, deletion, and your choices</h3>
+        <p>Support submissions are retained only for as long as reasonably necessary to answer the request, resolve related issues, maintain support records, and meet legal or security obligations. You may choose not to send feedback, may omit an optional image, and may request deletion of a support submission by emailing <a href="mailto:ibuben.support@gmail.com">ibuben.support@gmail.com</a> from the address used in the request.</p>
+      </div>
+
+      <div class="policy-item">
+        <h3>9. Changes to this policy</h3>
+        <p>We may update this Privacy Policy when iBuben's features or data-handling practices change. The effective date at the top of this page shows when the current version took effect.</p>
+      </div>
+
+      <div class="policy-item">
+        <h3>10. Contact</h3>
+        <p>If you have questions about privacy or need support, contact <a href="mailto:ibuben.support@gmail.com">ibuben.support@gmail.com</a>.</p>
+      </div>
     </section>
 
     <section aria-labelledby="armenian-policy" lang="hy">
       <div class="language-label">Հայերեն</div>
       <h2 id="armenian-policy">Գաղտնիության քաղաքականություն</h2>
-      <p>Այբուբեն ստեղնաշարը չի հավաքում, չի վաճառում և չի փոխանցում ձեր անձնական տվյալները։</p>
-      <p>Ստեղնաշարը կարող է լոկալ ձեր սարքում պահել սովորած բառերն ու նախընտրությունները՝ մուտքագրման առաջարկները բարելավելու համար։ Այս տվյալներն օգտագործվում են միայն ձեր ստեղնաշարի փորձառության բարելավման նպատակով։</p>
-      <p>Եթե Full Access-ը միացված է, ստեղնաշարը ձեր մուտքագրած տեքստը չի փոխանցում մեր սերվերներին։</p>
-      <p>Full Access-ն օգտագործվում է հավելվածի և ստեղնաշարի ընդհանուր կարգավորումների համար, օրինակ՝ companion հավելվածում ընտրված նախընտրությունները կարդալու նպատակով։</p>
-      <p>Մենք չենք օգտագործում նման տեխնոլոգիաներ կամ վերլուծական գործիքներ, որոնք հավաքում են ձեր անձնական տվյալները։</p>
-      <p>Դուք կարող եք ցանկացած պահի ջնջել սովորած բառերը և զրոյացնել ստեղնաշարի տվյալները հավելվածի կարգավորումներում։</p>
-      <p>Հարցերի դեպքում կապվեք մեզ հետ՝ <a href="mailto:ibuben.support@gmail.com">ibuben.support@gmail.com</a>։</p>
+
+      <div class="policy-item">
+        <h3>1. Կիրառման շրջանակը</h3>
+        <p>Այս գաղտնիության քաղաքականությունը բացատրում է, թե ինչպես է iBuben Keyboard-ը մշակում տեղեկությունները iBuben հավելվածում և դրա ստեղնաշարային ընդլայնման մեջ։</p>
+      </div>
+
+      <div class="policy-item">
+        <h3>2. Մուտքագրված տեքստը և տեղային տվյալները</h3>
+        <p>iBuben-ը չի հավաքում կամ փոխանցում ձեր մուտքագրած տեքստը, ստեղնաշարային հարվածների պատմությունը կամ տեքստային դաշտերի բովանդակությունը։ Սովորած բառերը, ձեռքով ավելացված բառերը, բառերի օգտագործման հաշվիչները, նախընտրությունները և ստեղնաշարի կարգավորումները պահվում են տեղային՝ ձեր սարքում կամ հավելվածի և ստեղնաշարային ընդլայնման ընդհանուր տեղային պահոցում։</p>
+        <p>Սովորած և ձեռքով ավելացված բառերը կարող եք ջնջել հավելվածից։</p>
+      </div>
+
+      <div class="policy-item">
+        <h3>3. Full Access</h3>
+        <p>Full Access-ն օգտագործվում է հավելվածի և ստեղնաշարային ընդլայնման միջև կարգավորումները և տեղային պահվող բառարանի տվյալները համօգտագործելու, ինչպես նաև ստեղնաշարի ամբողջական գործառույթները, ներառյալ հապտիկ արձագանքը, ապահովելու համար։ Full Access-ը միացնելը չի հանգեցնում նրան, որ iBuben-ը մեզ փոխանցի ձեր մուտքագրած տեքստը։</p>
+      </div>
+
+      <div class="policy-item">
+        <h3>4. Հետադարձ կապ և կոնտակտային տվյալներ</h3>
+        <p>Եթե հավելվածից ընտրում եք ուղարկել հետադարձ կապ կամ դիմել աջակցությանը, iBuben-ը ստանում է ձեր ներկայացրած տեղեկությունները՝ անունը, էլփոստի հասցեն, դիմումի տեսակը, հաղորդագրությունը, հավելվածի լեզուն և տարբերակը, ինչպես նաև ձեր ընտրությամբ կցված պատկերը։ Քանի որ այս տվյալներն ուղարկվում են միասին, դրանք կարող են կապված լինել ձեր ինքնության հետ։</p>
+        <p>Այս տեղեկություններն օգտագործվում են միայն ձեր դիմումը ստանալու և պատասխանելու, նշված խնդիրը ուսումնասիրելու, աջակցության ալիքի անվտանգությունն ու հուսալիությունը պահպանելու և չարաշահումները կանխելու համար։ Դրանք չեն օգտագործվում գովազդի, մարքեթինգի, վերլուծության, պրոֆիլավորման կամ հետևման նպատակով։</p>
+        <p>Աջակցության դիմումները փոխանցվում են Google Apps Script-ի և Google-ի էլփոստային ծառայությունների միջոցով, որպեսզի մենք կարողանանք ստանալ դրանք և պատասխանել։ Google-ը մշակում է այս տեղեկությունները որպես ծառայություն մատուցող՝ իր <a href="https://policies.google.com/privacy" rel="noopener noreferrer">գաղտնիության քաղաքականության</a> համաձայն։</p>
+      </div>
+
+      <div class="policy-item">
+        <h3>5. Լուսանկարներ և տեսանյութեր</h3>
+        <p>iBuben-ը չի դիտարկում կամ վերբեռնում ձեր լուսանկարների ամբողջ գրադարանը։ Եթե աջակցության դիմումին պատկեր եք կցում, ուղարկվում է միայն ձեր հստակ ընտրած պատկերը։ iBuben-ի պատկերը Photos հավելվածում պահելը կատարվում է տեղային՝ ձեր սարքում, և տվյալների հավաքում չի համարվում։</p>
+      </div>
+
+      <div class="policy-item">
+        <h3>6. Գնումներ և բաժանորդագրություններ</h3>
+        <p>Գնումներն ու բաժանորդագրությունները մշակվում են Apple-ի կողմից՝ StoreKit-ի միջոցով։ iBuben-ը կարող է ստանալ գնման և հասանելիության կարգավիճակը, որն անհրաժեշտ է պրեմիում գործառույթներն ակտիվացնելու համար, սակայն մենք չենք ստանում ձեր վճարային քարտի, բանկային հաշվի կամ վճարման այլ տվյալները։ Գնումների վերաբերյալ տվյալների մշակումը կարգավորվում է <a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer">Apple-ի գաղտնիության քաղաքականությամբ</a>։</p>
+      </div>
+
+      <div class="policy-item">
+        <h3>7. Գովազդ, վերլուծություն և հետևում</h3>
+        <p>iBuben-ը չի ցուցադրում երրորդ կողմի գովազդ, չի վաճառում անձնական տվյալներ և չի օգտագործում երրորդ կողմի վերլուծական կամ հետևման SDK-ներ։ Աջակցության համար ուղարկված տեղեկությունները չեն միացվում այլ ընկերություններից ստացված տվյալներին գովազդի կամ հետևման նպատակով։</p>
+      </div>
+
+      <div class="policy-item">
+        <h3>8. Պահպանում, ջնջում և ձեր ընտրությունը</h3>
+        <p>Աջակցության դիմումները պահվում են միայն այնքան ժամանակ, որքան ողջամտորեն անհրաժեշտ է դիմումին պատասխանելու, խնդիրը լուծելու, աջակցության գրառումները պահպանելու և իրավական կամ անվտանգության պահանջները կատարելու համար։ Կարող եք չուղարկել հետադարձ կապ, չկցել ոչ պարտադիր պատկեր և դիմումում օգտագործված էլփոստի հասցեից գրել <a href="mailto:ibuben.support@gmail.com">ibuben.support@gmail.com</a>՝ աջակցության դիմումը ջնջելու խնդրանքով։</p>
+      </div>
+
+      <div class="policy-item">
+        <h3>9. Քաղաքականության փոփոխություններ</h3>
+        <p>Մենք կարող ենք թարմացնել այս քաղաքականությունը, երբ փոխվեն iBuben-ի գործառույթները կամ տվյալների մշակման եղանակները։ Էջի վերևում նշված ուժի մեջ մտնելու ամսաթիվը ցույց է տալիս, թե երբ է գործել ընթացիկ տարբերակը։</p>
+      </div>
+
+      <div class="policy-item">
+        <h3>10. Կապ</h3>
+        <p>Գաղտնիության վերաբերյալ հարցերի կամ աջակցության համար գրեք <a href="mailto:ibuben.support@gmail.com">ibuben.support@gmail.com</a> հասցեին։</p>
+      </div>
     </section>
+
+    <footer>
+      © 2026 iBuben Keyboard · <a href="#support">Support</a>
+    </footer>
   </main>
 </body>
 </html>
