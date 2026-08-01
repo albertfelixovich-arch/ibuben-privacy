@@ -5,6 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Privacy Policy and support information for iBuben Keyboard.">
   <title>iBuben Keyboard Privacy Policy</title>
+  <script>
+    (() => {
+      const supportedLanguages = ["en", "hy", "ru"];
+      const requestedLanguage = new URLSearchParams(window.location.search).get("lang");
+      let savedLanguage = null;
+
+      try {
+        savedLanguage = window.localStorage.getItem("ibuben-privacy-language");
+      } catch (error) {
+        savedLanguage = null;
+      }
+
+      const browserLanguage = (navigator.languages || [navigator.language])
+        .map((language) => language.toLowerCase().split("-")[0])
+        .find((language) => supportedLanguages.includes(language));
+      const language = [requestedLanguage, savedLanguage, browserLanguage, "en"]
+        .find((candidate) => supportedLanguages.includes(candidate));
+
+      document.documentElement.classList.add("js");
+      document.documentElement.dataset.language = language;
+    })();
+  </script>
   <style>
     :root {
       color-scheme: light dark;
@@ -16,6 +38,7 @@
       --border: #ded8ea;
       --accent: #6b38d1;
       --accent-soft: #eee5ff;
+      --accent-contrast: #ffffff;
       --shadow: 0 16px 48px rgba(45, 24, 86, 0.08);
     }
 
@@ -29,6 +52,7 @@
         --border: #3b3448;
         --accent: #b894ff;
         --accent-soft: #2d2340;
+        --accent-contrast: #17151d;
         --shadow: none;
       }
     }
@@ -54,6 +78,77 @@
       width: min(920px, calc(100% - 32px));
       margin: 0 auto;
       padding: 56px 0 72px;
+    }
+
+    .language-switcher {
+      position: sticky;
+      top: 12px;
+      z-index: 10;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      width: min(560px, 100%);
+      padding: 6px;
+      margin: 0 auto 18px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .language-option {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 0;
+      padding: 10px 8px;
+      border: 0;
+      border-radius: 13px;
+      background: transparent;
+      color: var(--muted);
+      font: inherit;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.2;
+      cursor: pointer;
+      transition: color 160ms ease, background-color 160ms ease, transform 160ms ease;
+    }
+
+    .language-option:hover {
+      background: var(--surface-soft);
+      color: var(--text);
+    }
+
+    .language-option:active {
+      transform: scale(0.98);
+    }
+
+    .language-option:focus-visible {
+      outline: 3px solid var(--accent-soft);
+      outline-offset: 2px;
+    }
+
+    .language-option[aria-pressed="true"] {
+      background: var(--accent);
+      color: var(--accent-contrast);
+    }
+
+    .language-flag {
+      margin-right: 7px;
+      font-size: 19px;
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    html.js .policy-section {
+      display: none;
+    }
+
+    html.js[data-language="en"] .policy-section[data-language="en"],
+    html.js[data-language="hy"] .policy-section[data-language="hy"],
+    html.js[data-language="ru"] .policy-section[data-language="ru"] {
+      display: block;
     }
 
     header,
@@ -189,6 +284,16 @@
         padding-top: 24px;
       }
 
+      .language-switcher {
+        top: 8px;
+      }
+
+      h1 {
+        font-size: clamp(28px, 7.5vw, 31px);
+        overflow-wrap: break-word;
+        hyphens: auto;
+      }
+
       .summary {
         grid-template-columns: 1fr;
       }
@@ -197,36 +302,67 @@
         min-height: auto;
       }
     }
+
+    @media (max-width: 360px) {
+      header {
+        padding-inline: 20px;
+      }
+
+      .language-option {
+        padding-inline: 4px;
+        font-size: 13px;
+      }
+
+      .language-flag {
+        margin-right: 4px;
+        font-size: 17px;
+      }
+    }
   </style>
 </head>
 <body>
   <main>
+    <nav class="language-switcher" aria-label="Choose language" data-i18n-aria="languagePickerLabel">
+      <button class="language-option" type="button" data-language-option="en" aria-pressed="false">
+        <span class="language-flag" aria-hidden="true">🇬🇧</span>
+        <span>English</span>
+      </button>
+      <button class="language-option" type="button" data-language-option="hy" aria-pressed="false">
+        <span class="language-flag" aria-hidden="true">🇦🇲</span>
+        <span lang="hy">Հայերեն</span>
+      </button>
+      <button class="language-option" type="button" data-language-option="ru" aria-pressed="false">
+        <span class="language-flag" aria-hidden="true">🇷🇺</span>
+        <span lang="ru">Русский</span>
+      </button>
+    </nav>
+
     <header>
       <div class="eyebrow">iBuben Keyboard</div>
-      <h1>Privacy Policy</h1>
+      <h1 data-i18n="pageHeading">Privacy Policy</h1>
 
-      <div class="summary" aria-label="Privacy summary">
+      <div class="summary" aria-label="Privacy summary" data-i18n-aria="privacySummaryLabel">
         <div class="summary-item">
-          <strong>Your typing stays private</strong>
-          Keyboard input and learned words remain on your device.
+          <strong data-i18n="typingTitle">Your typing stays private</strong>
+          <span data-i18n="typingBody">Keyboard input and learned words remain on your device.</span>
         </div>
         <div class="summary-item">
-          <strong>No tracking or advertising</strong>
-          iBuben does not use advertising, tracking, or third-party analytics SDKs.
+          <strong data-i18n="trackingTitle">No tracking or advertising</strong>
+          <span data-i18n="trackingBody">iBuben does not use advertising, tracking, or third-party analytics SDKs.</span>
         </div>
         <div class="summary-item">
-          <strong>Support is your choice</strong>
-          Contact information is sent only when you choose to submit feedback or ask for help.
+          <strong data-i18n="supportChoiceTitle">Support is your choice</strong>
+          <span data-i18n="supportChoiceBody">Contact information is sent only when you choose to submit feedback or ask for help.</span>
         </div>
       </div>
 
       <div class="contact-card" id="support">
-        <h3>Support</h3>
-        <p>For questions, feedback, or data-deletion requests, email <a href="mailto:ibuben.support@gmail.com">ibuben.support@gmail.com</a>.</p>
+        <h3 data-i18n="supportTitle">Support</h3>
+        <p><span data-i18n="supportBefore">For questions, feedback, or data-deletion requests, email </span><a href="mailto:ibuben.support@gmail.com">ibuben.support@gmail.com</a><span data-i18n="supportAfter">.</span></p>
       </div>
     </header>
 
-    <section aria-labelledby="english-policy">
+    <section class="policy-section" data-language="en" aria-labelledby="english-policy">
       <div class="language-label">English</div>
       <h2 id="english-policy">Privacy Policy</h2>
 
@@ -284,7 +420,7 @@
       </div>
     </section>
 
-    <section aria-labelledby="armenian-policy" lang="hy">
+    <section class="policy-section" data-language="hy" aria-labelledby="armenian-policy" lang="hy">
       <div class="language-label">Հայերեն</div>
       <h2 id="armenian-policy">Գաղտնիության քաղաքականություն</h2>
 
@@ -342,7 +478,7 @@
       </div>
     </section>
 
-    <section aria-labelledby="russian-policy" lang="ru">
+    <section class="policy-section" data-language="ru" aria-labelledby="russian-policy" lang="ru">
       <div class="language-label">Русский</div>
       <h2 id="russian-policy">Политика конфиденциальности</h2>
 
@@ -401,8 +537,124 @@
     </section>
 
     <footer>
-      © 2026 iBuben Keyboard · <a href="#support">Support</a>
+      © 2026 iBuben Keyboard · <a href="#support" data-i18n="footerSupport">Support</a>
     </footer>
   </main>
+  <script>
+    (() => {
+      const supportedLanguages = ["en", "hy", "ru"];
+      const translations = {
+        en: {
+          documentTitle: "iBuben Keyboard Privacy Policy",
+          description: "Privacy Policy and support information for iBuben Keyboard.",
+          languagePickerLabel: "Choose language",
+          pageHeading: "Privacy Policy",
+          privacySummaryLabel: "Privacy summary",
+          typingTitle: "Your typing stays private",
+          typingBody: "Keyboard input and learned words remain on your device.",
+          trackingTitle: "No tracking or advertising",
+          trackingBody: "iBuben does not use advertising, tracking, or third-party analytics SDKs.",
+          supportChoiceTitle: "Support is your choice",
+          supportChoiceBody: "Contact information is sent only when you choose to submit feedback or ask for help.",
+          supportTitle: "Support",
+          supportBefore: "For questions, feedback, or data-deletion requests, email ",
+          supportAfter: ".",
+          footerSupport: "Support"
+        },
+        hy: {
+          documentTitle: "iBuben Keyboard — Գաղտնիության քաղաքականություն",
+          description: "iBuben Keyboard-ի գաղտնիության քաղաքականությունը և աջակցության տեղեկությունները։",
+          languagePickerLabel: "Ընտրեք լեզուն",
+          pageHeading: "Գաղտնիության քաղաքականություն",
+          privacySummaryLabel: "Գաղտնիության համառոտ նկարագրություն",
+          typingTitle: "Ձեր մուտքագրածը մնում է գաղտնի",
+          typingBody: "Ստեղնաշարի մուտքագրումները և սովորած բառերը մնում են ձեր սարքում։",
+          trackingTitle: "Առանց հետևման և գովազդի",
+          trackingBody: "iBuben-ը չի օգտագործում գովազդ, հետևում կամ երրորդ կողմի վերլուծական SDK-ներ։",
+          supportChoiceTitle: "Աջակցությունը ձեր ընտրությունն է",
+          supportChoiceBody: "Կոնտակտային տվյալներն ուղարկվում են միայն այն ժամանակ, երբ դուք ընտրում եք հետադարձ կապ ուղարկել կամ օգնություն խնդրել։",
+          supportTitle: "Աջակցություն",
+          supportBefore: "Հարցերի, հետադարձ կապի կամ տվյալների ջնջման հարցումների համար գրեք ",
+          supportAfter: " հասցեին։",
+          footerSupport: "Աջակցություն"
+        },
+        ru: {
+          documentTitle: "iBuben Keyboard — Политика конфиденциальности",
+          description: "Политика конфиденциальности и информация о поддержке клавиатуры iBuben.",
+          languagePickerLabel: "Выберите язык",
+          pageHeading: "Политика конфиденциальности",
+          privacySummaryLabel: "Кратко о конфиденциальности",
+          typingTitle: "Введённый текст остаётся конфиденциальным",
+          typingBody: "Ввод с клавиатуры и запомненные слова остаются на вашем устройстве.",
+          trackingTitle: "Без отслеживания и рекламы",
+          trackingBody: "iBuben не использует рекламу, отслеживание или сторонние SDK для аналитики.",
+          supportChoiceTitle: "Обращение в поддержку — ваш выбор",
+          supportChoiceBody: "Контактные данные отправляются только тогда, когда вы сами решаете оставить отзыв или обратиться за помощью.",
+          supportTitle: "Поддержка",
+          supportBefore: "По вопросам, для обратной связи или удаления данных напишите на ",
+          supportAfter: ".",
+          footerSupport: "Поддержка"
+        }
+      };
+
+      const description = document.querySelector('meta[name="description"]');
+
+      function languageFromURL() {
+        const language = new URLSearchParams(window.location.search).get("lang");
+        return supportedLanguages.includes(language) ? language : null;
+      }
+
+      function setLanguage(language, options = {}) {
+        const selectedLanguage = supportedLanguages.includes(language) ? language : "en";
+        const strings = translations[selectedLanguage];
+
+        document.documentElement.lang = selectedLanguage;
+        document.documentElement.dataset.language = selectedLanguage;
+        document.title = strings.documentTitle;
+        description.content = strings.description;
+
+        document.querySelectorAll("[data-i18n]").forEach((element) => {
+          element.textContent = strings[element.dataset.i18n];
+        });
+
+        document.querySelectorAll("[data-i18n-aria]").forEach((element) => {
+          element.setAttribute("aria-label", strings[element.dataset.i18nAria]);
+        });
+
+        document.querySelectorAll("[data-language-option]").forEach((button) => {
+          button.setAttribute("aria-pressed", String(button.dataset.languageOption === selectedLanguage));
+        });
+
+        if (options.persist !== false) {
+          try {
+            window.localStorage.setItem("ibuben-privacy-language", selectedLanguage);
+          } catch (error) {
+            // The page remains fully functional when local storage is unavailable.
+          }
+        }
+
+        if (options.updateURL !== false) {
+          const url = new URL(window.location.href);
+          url.searchParams.set("lang", selectedLanguage);
+          window.history.replaceState(null, "", url);
+        }
+      }
+
+      document.querySelectorAll("[data-language-option]").forEach((button) => {
+        button.addEventListener("click", () => setLanguage(button.dataset.languageOption));
+      });
+
+      window.addEventListener("popstate", () => {
+        setLanguage(languageFromURL() || document.documentElement.dataset.language, {
+          persist: false,
+          updateURL: false
+        });
+      });
+
+      setLanguage(languageFromURL() || document.documentElement.dataset.language, {
+        updateURL: true
+      });
+    })();
+  </script>
 </body>
 </html>
