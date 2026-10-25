@@ -340,16 +340,16 @@
     <header>
       <div class="eyebrow">iBuben Keyboard</div>
       <h1 data-i18n="pageHeading">Privacy Policy</h1>
-      <p class="meta" data-i18n="lastUpdated">Last updated: September 11, 2026</p>
+      <p class="meta" data-i18n="lastUpdated">Last updated: October 26, 2026</p>
 
       <div class="summary" aria-label="Privacy summary" data-i18n-aria="privacySummaryLabel">
         <div class="summary-item">
           <strong data-i18n="typingTitle">Your typing stays private</strong>
-          <span data-i18n="typingBody">Keyboard input and learned words remain on your device.</span>
+          <span data-i18n="typingBody">Ordinary keyboard input stays on your device; only text you explicitly submit to the optional Translator is sent.</span>
         </div>
         <div class="summary-item">
-          <strong data-i18n="trackingTitle">No tracking or advertising</strong>
-          <span data-i18n="trackingBody">iBuben does not use advertising, tracking, or third-party analytics SDKs.</span>
+          <strong data-i18n="trackingTitle">App statistics are your choice</strong>
+          <span data-i18n="trackingBody">Optional app statistics start only if you turn them on. No advertising or tracking across apps.</span>
         </div>
         <div class="summary-item">
           <strong data-i18n="supportChoiceTitle">Support is your choice</strong>
@@ -367,7 +367,8 @@
       <div class="language-label">English</div>
       <h2 id="english-policy">Privacy Policy</h2>
       <p>This policy applies to the iBuben companion app, the iBuben custom keyboard extension, and the supporting services described below.</p>
-      <p>iBuben does not require a separate iBuben user account. It does not sell personal data, display third-party advertising, track you across apps or websites, or include third-party analytics SDKs.</p>
+      <p>iBuben is operated by Albert Harutyunyan, an individual entrepreneur registered in Armenia, who is responsible for the data handling described in this policy. For privacy questions and requests, email <a href="mailto:ibuben.support@gmail.com">ibuben.support@gmail.com</a>.</p>
+      <p>iBuben does not require a separate iBuben user account. It does not sell personal data, display third-party advertising, or track you across apps or websites. Optional app statistics are described below.</p>
 
       <div class="policy-item">
         <h3>Keyboard, Full Access, and data stored on your device</h3>
@@ -375,6 +376,12 @@
         <p>Full Access is optional. Basic typing, local settings already available to the keyboard, and verified premium access do not require Full Access. It is needed only for features that require the keyboard to write shared local data or use the network, such as saving words learned or added from the keyboard, haptic feedback, and a translation request after your explicit action. Enabling Full Access by itself does not transmit text.</p>
         <p>Learned words, personal-dictionary entries, keywords and text shortcuts, word-use counts, recent emoji, and preferences such as layout, key theme, gestures, symbols, and Translator settings may be stored locally on your device. They are used to provide and personalize keyboard features and are not uploaded to our servers.</p>
         <p>Dictionary and keyword backups are created or imported only when you explicitly choose the action and a location in Files or iCloud Drive. iBuben does not automatically upload these files to the developer or Firebase. If you choose iCloud Drive, Apple processes the file under your iCloud settings and Apple’s privacy terms.</p>
+      </div>
+
+      <div class="policy-item">
+        <h3>Language downloads and on-device features</h3>
+        <p>When you download or update a language pack, the app requests public dictionary files and update information from Google Firebase Storage. The hosting service receives ordinary request data, including your IP address and the requested file, which can reveal the selected language pack. Downloading does not upload typed text, learned words, or your personal dictionary. Installed dictionaries and keyboard predictions are processed locally.</p>
+        <p>Where available, AI Rewrite and AI Emojis use Apple’s on-device model. The text and relevant context you choose for these features are processed on the device; iBuben does not send them to an external AI service or keep a server-side transcript. Keyboard calculator expressions and results are also processed locally.</p>
       </div>
 
       <div class="policy-item">
@@ -386,8 +393,16 @@
       </div>
 
       <div class="policy-item">
+        <h3>Optional app statistics</h3>
+        <p>App statistics are off by default. Where this option is available, users aged 18 or over can turn it on to help improve iBuben. Declining does not limit app or keyboard features. Before you enable it, no statistics are sent to PostHog and no past activity is saved for later sending.</p>
+        <p>Statistics cover only the main iBuben app: sections opened, a small set of button actions, setup completion, and rounded time with the app on screen. They never include keyboard activity, typed text, messages, clipboard contents, learned words, translations, feedback contents, photos, payment details, or other sensitive content. We do not create personal profiles or record the screen.</p>
+        <p>PostHog EU processes these limited statistics on our behalf to improve the app. Each event gets a new random technical code, without a shared user, device, or session identifier. The App Store country is checked to determine availability and included as a market label in events; it is not your physical location. We do not send advertising identifiers, permanent device identifiers, or GPS location. Network services necessarily receive your IP address when delivering a request; storing IP addresses in the statistics and using them to determine location are disabled.</p>
+        <p>You can turn app statistics off at any time in About iBuben. This stops further collection and sending and clears pending events on the device. It does not automatically delete events already received. Statistics are kept only as long as reasonably necessary to understand and improve the app. You can request deletion through Contact Developer or the email below; because events are not linked to your name or account, we may be unable to find a particular past event.</p>
+      </div>
+
+      <div class="policy-item">
         <h3>Optional notifications</h3>
-        <p>If you opt in to notifications, the companion app uses Firebase Cloud Messaging (FCM) and Apple Push Notification service (APNs) to deliver occasional app updates and useful tips. These services process an APNs token, a Firebase app installation identifier, and technical app and device information needed to address, deliver, and diagnose notifications, such as device model, language, time zone, operating-system version, app identifier, and app version. FCM may process non-personal delivery and diagnostic data. Firebase Analytics is not included. The keyboard extension does not use Firebase notification or analytics SDKs, and notification services do not receive keyboard text, learned words, suggestions, clipboard content, or keyboard activity.</p>
+        <p>If you opt in to notifications, the companion app uses Firebase Cloud Messaging (FCM) and Apple Push Notification service (APNs) to deliver occasional app updates and useful tips. These services process an APNs token, a Firebase app installation identifier, and technical app and device information needed to address, deliver, and diagnose notifications, such as device model, language, time zone, operating-system version, app identifier, and app version. FCM may process non-personal delivery and diagnostic data. Firebase Analytics is linked only in the companion app, with data collection disabled. The keyboard extension does not use Firebase notification or analytics SDKs, and notification services do not receive keyboard text, learned words, suggestions, clipboard content, or keyboard activity.</p>
         <p>Notifications are optional. You can disable them in iBuben or iOS Settings. When you opt out in iBuben, the app disables messaging and requests deletion of its FCM registration token and topic subscription; if the device is temporarily offline, cleanup is retried later.</p>
       </div>
 
@@ -400,21 +415,31 @@
       <div class="policy-item">
         <h3>Purchases, subscriptions, and premium access</h3>
         <p>Purchases and subscriptions are processed by Apple through StoreKit. iBuben does not receive your Apple ID, payment card, bank-account information, or other payment credentials.</p>
-        <p>Eligible users may also receive a one-time 7-day App Trial. The App Trial is provided by iBuben, is separate from an Apple subscription introductory offer, starts only after the user explicitly chooses to begin it, does not create a purchase or subscription, does not charge the user, and does not renew automatically. A Yearly subscription and Lifetime purchase remain separate Apple in-app purchases. If Apple separately displays an introductory offer for Yearly, that offer is part of the subscription and its billing and renewal terms are shown in Apple’s confirmation sheet.</p>
+        <p>Eligible users may also receive a one-time 7-day App Trial. The App Trial is provided by iBuben, is separate from an Apple subscription introductory offer, starts only after the user explicitly chooses to begin it, does not create a purchase or subscription, does not charge the user, and does not renew automatically. Subscription plans such as Monthly and Yearly, and a Lifetime purchase, remain separate Apple in-app purchases. If Apple separately displays an introductory offer for Yearly, that offer is part of the subscription and its billing and renewal terms are shown in Apple’s confirmation sheet.</p>
         <p>To determine App Trial eligibility, validate premium access, restore purchases, and react to renewals, billing status, refunds, or revocations, the companion app and iBuben’s purchase-verification service may process Apple-signed App Transaction, transaction, renewal, and App Store Server Notification data. This may include Apple-generated app-transaction, transaction, and original-transaction identifiers; product identifier; App Store environment; purchase and expiration dates; grace-period, billing, ownership, and revocation status; and notification-processing status. The service is hosted on Google Cloud/Firebase and may query Apple’s App Store Server API. These records do not contain keyboard text, an Apple ID, advertising identifiers, payment credentials, or a device fingerprint.</p>
         <p>App Trial eligibility is associated with Apple’s verified app-transaction identity for the Apple Account used for Media &amp; Purchases. iBuben receives the Apple-signed account-level identifier, not the Apple ID, name, or email address. This allows the same account’s App Trial history to remain consistent across reinstallations and devices.</p>
         <p>Purchase and trial-history records are retained for as long as reasonably necessary to provide and restore entitlement, preserve App Trial eligibility and use history and any Apple offer history, process renewals, refunds, and revocations, prevent fraud or repeated trial use, and meet security or legal obligations. Deleting or reinstalling the app does not delete Apple’s purchase history or these necessary entitlement records. Subscription cancellation and Apple purchase-history controls are managed through Apple.</p>
       </div>
 
       <div class="policy-item">
+        <h3>Private purchase reports</h3>
+        <p>Our purchase service maintains private operational reports about subscriptions, trials and purchase events. Limited alerts may be delivered to the developer through Telegram: a pseudonymous customer number or event reference, plan, amount and currency when supplied by Apple, App Store country, dates, and renewal status. These reports do not include your Apple ID, name, email, payment credentials, or keyboard text. This purchase-service processing is separate from optional app-usage statistics and is not controlled by that switch.</p>
+      </div>
+
+      <div class="policy-item">
         <h3>Service providers and international processing</h3>
-        <p>Depending on the feature you choose, data may be processed by Apple (StoreKit, APNs, and iCloud Drive), Google/Firebase/Google Cloud (notifications, service hosting, rate limiting, and purchase verification), Google Apps Script and email services (feedback), and Yandex Cloud Translate (translation). Processing may occur in countries other than your own. We use these providers only to deliver the functions described above and require them to protect data consistently with this policy and applicable law. We do not permit them to use keyboard text or other submitted content for iBuben advertising or cross-app tracking.</p>
+        <p>Depending on the feature you choose, data may be processed by Apple (StoreKit, APNs, and iCloud Drive), Google/Firebase/Google Cloud (language downloads, notifications, service hosting, rate limiting, and purchase verification), Google Apps Script and email services (feedback), Yandex Cloud Translate (translation), PostHog EU (optional app statistics), and Telegram (private purchase-service alerts). Processing may occur in countries other than your own. We use these providers only to deliver the functions described above under their applicable terms and privacy arrangements. We do not permit them to use keyboard text or other submitted content for iBuben advertising or cross-app tracking.</p>
       </div>
 
       <div class="policy-item">
         <h3>Retention, deletion, and your choices</h3>
-        <p>You can delete learned words and reset keyboard data in the app, delete backup files from the location you selected, disable the Translator or notifications in iBuben, and change Full Access, Photos, and notification permissions in iOS Settings. Information submitted through feedback is kept only as long as reasonably necessary to respond, resolve the issue, and meet security or legal obligations.</p>
+        <p>You can delete learned words and reset keyboard data in the app, delete backup files from the location you selected, disable the Translator, notifications, or app statistics in iBuben, and change Full Access, Photos, and notification permissions in iOS Settings. Information submitted through feedback is kept only as long as reasonably necessary to respond, resolve the issue, and meet security or legal obligations.</p>
         <p>You may ask questions or request deletion of data controlled by iBuben by emailing <a href="mailto:ibuben.support@gmail.com">ibuben.support@gmail.com</a>. Some information may need to be retained where required to maintain purchase or trial integrity, complete a request, prevent abuse, or comply with law. Data controlled by Apple, Google, Yandex, your email provider, Files, or iCloud must also be managed through that provider’s controls. Please do not send keyboard text or payment credentials in a privacy request.</p>
+      </div>
+
+      <div class="policy-item">
+        <h3>This privacy-policy webpage</h3>
+        <p>This page is hosted on GitHub Pages. Opening it sends ordinary network request data, including your IP address, to GitHub. The page stores only your chosen display language in browser local storage and includes no iBuben analytics script. See <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub’s privacy statement</a> for its handling of service data.</p>
       </div>
 
       <div class="policy-item">
@@ -432,7 +457,8 @@
       <div class="language-label">Հայերեն</div>
       <h2 id="armenian-policy">Գաղտնիության քաղաքականություն</h2>
       <p>Այս քաղաքականությունը վերաբերում է iBuben հիմնական հավելվածին, iBuben ստեղնաշարի ընդլայնմանը և ստորև նկարագրված օժանդակ ծառայություններին։</p>
-      <p>iBuben-ն առանձին օգտատիրոջ հաշիվ չի պահանջում։ Այն չի վաճառում անձնական տվյալներ, չի ցուցադրում երրորդ կողմի գովազդ, չի հետևում ձեզ տարբեր հավելվածներում կամ կայքերում և չի ներառում երրորդ կողմի վերլուծական SDK-ներ։</p>
+      <p>iBuben-ի օպերատորն է Հայաստանում գրանցված անհատ ձեռնարկատեր Albert Harutyunyan-ը, որը պատասխանատու է այս քաղաքականությամբ նկարագրված տվյալների մշակման համար։ Գաղտնիության հարցերի և հարցումների համար գրեք <a href="mailto:ibuben.support@gmail.com">ibuben.support@gmail.com</a> հասցեին։</p>
+      <p>iBuben-ն առանձին օգտատիրոջ հաշիվ չի պահանջում։ Այն չի վաճառում անձնական տվյալներ, չի ցուցադրում երրորդ կողմի գովազդ և չի հետևում ձեզ տարբեր հավելվածներում կամ կայքերում։ Հավելվածի կամընտիր վիճակագրությունը նկարագրված է ստորև։</p>
 
       <div class="policy-item">
         <h3>Ստեղնաշար, «Full Access» և սարքում պահվող տվյալներ</h3>
@@ -440,6 +466,12 @@
         <p>«Full Access»-ը կամընտիր է։ Սովորական մուտքագրումը, ստեղնաշարին արդեն հասանելի տեղային կարգավորումները և հաստատված պրեմիում հասանելիությունը «Full Access» չեն պահանջում։ Այն անհրաժեշտ է միայն այն գործառույթների համար, որոնց դեպքում ստեղնաշարը պետք է տվյալներ գրի ընդհանուր տեղային պահոցում կամ օգտվի ցանցից, օրինակ՝ ստեղնաշարից սովորած կամ ավելացված բառերը պահպանելու, հապտիկ արձագանքի և ձեր հստակ գործողությունից հետո թարգմանության հարցում ուղարկելու համար։ Միայն «Full Access»-ը միացնելը տեքստ չի փոխանցում։</p>
         <p>Սովորած բառերը, անձնական բառարանի գրառումները, բանալի բառերն ու տեքստային կրճատումները, բառերի օգտագործման քանակները, վերջին emoji-ները, ինչպես նաև դասավորության, ստեղների տեսքի, ժեստերի, սիմվոլների և Թարգմանչի կարգավորումները կարող են տեղային պահպանվել ձեր սարքում։ Դրանք օգտագործվում են ստեղնաշարի գործառույթներն ապահովելու և անհատականացնելու համար և չեն վերբեռնվում մեր սերվերներ։</p>
         <p>Բառարանի և բանալի բառերի պահուստային ֆայլերը ստեղծվում կամ ներմուծվում են միայն այն ժամանակ, երբ դուք հստակ ընտրում եք գործողությունն ու պահպանման վայրը Files-ում կամ iCloud Drive-ում։ iBuben-ն այդ ֆայլերն ավտոմատ չի վերբեռնում ստեղծողին կամ Firebase։ Եթե ընտրում եք iCloud Drive-ը, ֆայլը մշակվում է Apple-ի կողմից՝ ձեր iCloud-ի կարգավորումների և Apple-ի գաղտնիության պայմանների համաձայն։</p>
+      </div>
+
+      <div class="policy-item">
+        <h3>Լեզուների ներբեռնում և տեղային գործառույթներ</h3>
+        <p>Լեզվային փաթեթ ներբեռնելիս կամ թարմացնելիս հավելվածը Google Firebase Storage-ից պահանջում է հանրային բառարանների ֆայլեր և թարմացումների տեղեկություններ։ Հոսթինգի ծառայությունը ստանում է հարցման սովորական տվյալներ՝ ներառյալ IP հասցեն և պահանջված ֆայլը, որով հնարավոր է որոշել ընտրված լեզվային փաթեթը։ Ներբեռնումը չի վերբեռնում մուտքագրված տեքստը, սովորած բառերը կամ անձնական բառարանը։ Տեղադրված բառարաններն ու ստեղնաշարի հուշումները մշակվում են սարքում։</p>
+        <p>Հասանելի լինելու դեպքում AI Rewrite-ն ու AI Emojis-ն օգտագործում են Apple-ի տեղային մոդելը։ Ձեր ընտրած տեքստն ու անհրաժեշտ համատեքստը մշակվում են սարքում․ iBuben-ը դրանք չի ուղարկում արտաքին AI ծառայության և սերվերում պատմություն չի պահում։ Ստեղնաշարի հաշվիչի արտահայտություններն ու արդյունքները նույնպես մշակվում են տեղային։</p>
       </div>
 
       <div class="policy-item">
@@ -451,8 +483,16 @@
       </div>
 
       <div class="policy-item">
+        <h3>Հավելվածի կամընտիր վիճակագրություն</h3>
+        <p>Հավելվածի վիճակագրությունը լռելյայն անջատված է։ Այն երկրներում, որտեղ այս տարբերակը հասանելի է, 18 տարին լրացած օգտատերերը կարող են այն միացնել՝ iBuben-ը բարելավելու համար։ Հրաժարվելը չի սահմանափակում հավելվածի կամ ստեղնաշարի գործառույթները։ Մինչև այն միացնելը PostHog-ին վիճակագրություն չի ուղարկվում, իսկ նախորդ գործողությունները հետագայում ուղարկելու համար չեն պահվում։</p>
+        <p>Վիճակագրությունը վերաբերում է միայն iBuben-ի հիմնական հավելվածին՝ բացված բաժիններին, որոշ կոճակների սեղմումներին, սկզբնական կարգավորման ավարտին և հավելվածն էկրանին բաց պահելու կլորացված տևողությանը։ Այն երբեք չի ներառում ստեղնաշարի օգտագործումը, մուտքագրված տեքստը, հաղորդագրությունները, փոխանակման բուֆերի պարունակությունը, սովորած բառերը, թարգմանությունները, հետադարձ կապի բովանդակությունը, լուսանկարները, վճարային տվյալները կամ այլ զգայուն բովանդակություն։ Մենք անձնական պրոֆիլներ չենք ստեղծում և էկրանը չենք ձայնագրում։</p>
+        <p>PostHog EU-ն մեր անունից մշակում է այս սահմանափակ վիճակագրությունը՝ հավելվածը բարելավելու համար։ Յուրաքանչյուր իրադարձության համար ստեղծվում է նոր պատահական տեխնիկական կոդ՝ առանց օգտատիրոջ, սարքի կամ այցելության ընդհանուր նույնացուցիչի։ App Store-ի երկիրը ստուգվում է գործառույթի հասանելիության համար և ներառվում իրադարձություններում որպես շուկայի նշում․ դա ձեր ֆիզիկական գտնվելու վայրը չէ։ Մենք չենք ուղարկում գովազդային նույնացուցիչներ, սարքի մշտական նույնացուցիչներ կամ GPS կոորդինատներ։ Հարցումն ուղարկելու ընթացքում ցանցային ծառայություններն անխուսափելիորեն ստանում են ձեր IP հասցեն, սակայն վիճակագրությունում IP հասցեների պահպանումը և դրանցով գտնվելու վայրի որոշումն անջատված են։</p>
+        <p>Հավելվածի վիճակագրությունը ցանկացած պահի կարող եք անջատել «iBuben-ի մասին» բաժնում։ Դրանից հետո հավաքումն ու ուղարկումը դադարում են, իսկ սարքում դեռ չուղարկված իրադարձությունները ջնջվում են։ Արդեն ստացված իրադարձություններն ինքնաբերաբար չեն ջնջվում։ Վիճակագրությունը պահվում է միայն այնքան ժամանակ, որքան ողջամտորեն անհրաժեշտ է հավելվածը հասկանալու և բարելավելու համար։ Ջնջում կարող եք խնդրել «Կապ ստեղծողի հետ» բաժնից կամ ստորև նշված էլ․ հասցեով․ քանի որ իրադարձությունները կապված չեն ձեր անվան կամ հաշվի հետ, հնարավոր է՝ չկարողանանք գտնել որոշակի նախորդ իրադարձություն։</p>
+      </div>
+
+      <div class="policy-item">
         <h3>Օպցիոնալ ծանուցումներ</h3>
-        <p>Եթե համաձայնում եք ստանալ ծանուցումներ, հիմնական հավելվածը ժամանակ առ ժամանակ նորություններ և օգտակար խորհուրդներ ուղարկելու համար օգտագործում է Firebase Cloud Messaging (FCM) և Apple Push Notification service (APNs) ծառայությունները։ Այդ ծառայությունները մշակում են APNs-ի թոքենը, Firebase-ում հավելվածի տեղադրման նույնացուցիչը և ծանուցումները հասցեագրելու, առաքելու ու ախտորոշելու համար անհրաժեշտ տեխնիկական տվյալները՝ սարքի մոդելը, լեզուն, ժամային գոտին, օպերացիոն համակարգի տարբերակը, հավելվածի նույնացուցիչն ու տարբերակը։ FCM-ը կարող է մշակել նաև անձի հետ չկապված առաքման և ախտորոշման տվյալներ։ Firebase Analytics-ը ներառված չէ։ Ստեղնաշարի ընդլայնումը չի օգտագործում Firebase-ի ծանուցումների կամ վերլուծական SDK-ները, իսկ ծանուցումների ծառայությունները չեն ստանում ստեղնաշարի տեքստը, սովորած բառերը, առաջարկները, փոխանակման բուֆերի պարունակությունը կամ ստեղնաշարի օգտագործման տվյալները։</p>
+        <p>Եթե համաձայնում եք ստանալ ծանուցումներ, հիմնական հավելվածը ժամանակ առ ժամանակ նորություններ և օգտակար խորհուրդներ ուղարկելու համար օգտագործում է Firebase Cloud Messaging (FCM) և Apple Push Notification service (APNs) ծառայությունները։ Այդ ծառայությունները մշակում են APNs-ի թոքենը, Firebase-ում հավելվածի տեղադրման նույնացուցիչը և ծանուցումները հասցեագրելու, առաքելու ու ախտորոշելու համար անհրաժեշտ տեխնիկական տվյալները՝ սարքի մոդելը, լեզուն, ժամային գոտին, օպերացիոն համակարգի տարբերակը, հավելվածի նույնացուցիչն ու տարբերակը։ FCM-ը կարող է մշակել նաև անձի հետ չկապված առաքման և ախտորոշման տվյալներ։ Firebase Analytics-ը ներառված է միայն հիմնական հավելվածում, իսկ տվյալների հավաքումն անջատված է։ Ստեղնաշարի ընդլայնումը չի օգտագործում Firebase-ի ծանուցումների կամ վերլուծական SDK-ները, իսկ ծանուցումների ծառայությունները չեն ստանում ստեղնաշարի տեքստը, սովորած բառերը, առաջարկները, փոխանակման բուֆերի պարունակությունը կամ ստեղնաշարի օգտագործման տվյալները։</p>
         <p>Ծանուցումները կամընտիր են։ Դրանք կարող եք անջատել iBuben-ում կամ iOS-ի Կարգավորումներում։ iBuben-ում հրաժարվելու դեպքում հավելվածն անջատում է հաղորդագրությունների ծառայությունը և խնդրում ջնջել FCM-ի գրանցման թոքենն ու թեմայի բաժանորդագրությունը։ Եթե սարքը ժամանակավորապես անցանց է, մաքրումը կրկին կփորձվի ավելի ուշ։</p>
       </div>
 
@@ -465,21 +505,31 @@
       <div class="policy-item">
         <h3>Գնումներ, բաժանորդագրություններ և պրեմիում հասանելիություն</h3>
         <p>Գնումներն ու բաժանորդագրությունները մշակվում են Apple-ի կողմից՝ StoreKit-ի միջոցով։ iBuben-ը չի ստանում ձեր Apple ID-ն, վճարային քարտի կամ բանկային հաշվի տվյալները և վճարման այլ տվյալներ։</p>
-        <p>Իրավասու օգտատերերին կարող է տրամադրվել նաև մեկանգամյա 7-օրյա App Trial։ App Trial-ը տրամադրվում է iBuben-ի կողմից, առանձին է Apple-ի բաժանորդագրության ներածական առաջարկից, սկսվում է միայն օգտատիրոջ հստակ ընտրությունից հետո, գնում կամ բաժանորդագրություն չի ստեղծում, վճար չի գանձում և ինքնաբերաբար չի երկարաձգվում։ Yearly բաժանորդագրությունն ու Lifetime գնումը մնում են Apple-ի առանձին ներհավելվածային գնումներ։ Եթե Apple-ը Yearly-ի համար առանձին ներածական առաջարկ է ցուցադրում, այն բաժանորդագրության մաս է, իսկ վճարման ու երկարաձգման պայմանները ներկայացվում են Apple-ի հաստատման պատուհանում։</p>
+        <p>Իրավասու օգտատերերին կարող է տրամադրվել նաև մեկանգամյա 7-օրյա App Trial։ App Trial-ը տրամադրվում է iBuben-ի կողմից, առանձին է Apple-ի բաժանորդագրության ներածական առաջարկից, սկսվում է միայն օգտատիրոջ հստակ ընտրությունից հետո, գնում կամ բաժանորդագրություն չի ստեղծում, վճար չի գանձում և ինքնաբերաբար չի երկարաձգվում։ Բաժանորդագրությունները, այդ թվում՝ Monthly-ն ու Yearly-ն, և Lifetime գնումը մնում են Apple-ի առանձին ներհավելվածային գնումներ։ Եթե Apple-ը Yearly-ի համար առանձին ներածական առաջարկ է ցուցադրում, այն բաժանորդագրության մաս է, իսկ վճարման ու երկարաձգման պայմանները ներկայացվում են Apple-ի հաստատման պատուհանում։</p>
         <p>App Trial-ի իրավասությունը որոշելու, պրեմիում հասանելիությունը հաստատելու, գնումները վերականգնելու, ինչպես նաև երկարաձգումներին, վճարման կարգավիճակին, գումարի վերադարձին կամ հասանելիության հետկանչին արձագանքելու համար հիմնական հավելվածը և iBuben-ի գնումների ստուգման ծառայությունը կարող են մշակել Apple-ի ստորագրած App Transaction-ի, գործարքների, երկարաձգումների և App Store Server Notification-ի տվյալները։ Դրանք կարող են ներառել Apple-ի ստեղծած հավելվածային գործարքի, գործարքի և սկզբնական գործարքի նույնացուցիչները, ապրանքի նույնացուցիչը, App Store-ի միջավայրը, գնման ու ավարտի ամսաթվերը, արտոնյալ ժամանակահատվածի, վճարման, սեփականության և հետկանչի կարգավիճակները, ինչպես նաև ծանուցման մշակման կարգավիճակը։ Ծառայությունը տեղակայված է Google Cloud/Firebase-ում և կարող է հարցումներ կատարել Apple-ի App Store Server API-ին։ Այս գրառումները չեն պարունակում ստեղնաշարի տեքստ, Apple ID, գովազդային նույնացուցիչներ, վճարային տվյալներ կամ սարքի թվային մատնահետք։</p>
         <p>App Trial-ի իրավասությունը կապվում է Media &amp; Purchases-ի համար օգտագործվող Apple Account-ի՝ Apple-ի կողմից հաստատված հավելվածային գործարքի նույնացուցիչին։ iBuben-ը ստանում է Apple-ի ստորագրած հաշվի մակարդակի նույնացուցիչը, ոչ թե Apple ID-ն, անունը կամ էլ․ փոստի հասցեն։ Սա թույլ է տալիս նույն հաշվի App Trial-ի պատմությունը պահպանել հավելվածը կրկին տեղադրելիս և այլ սարքի անցնելիս։</p>
         <p>Գնումների և փորձաշրջանի պատմության գրառումները պահվում են այնքան ժամանակ, որքան ողջամտորեն անհրաժեշտ է հասանելիությունն ապահովելու և վերականգնելու, App Trial-ի իրավասության ու օգտագործման պատմությունը և Apple-ի ցանկացած առաջարկի պատմությունը պահպանելու, երկարաձգումները, վերադարձներն ու հետկանչերը մշակելու, խարդախությունը կամ փորձաշրջանի կրկնակի օգտագործումը կանխելու և անվտանգության կամ իրավական պահանջները կատարելու համար։ Հավելվածը ջնջելը կամ կրկին տեղադրելը չի ջնջում Apple-ի գնումների պատմությունը կամ հասանելիության համար անհրաժեշտ այս գրառումները։ Բաժանորդագրության չեղարկումն ու Apple-ի գնումների պատմության կառավարումը կատարվում են Apple-ի միջոցով։</p>
       </div>
 
       <div class="policy-item">
+        <h3>Գնումների ծառայողական հաշվետվություններ</h3>
+        <p>Գնումների ծառայությունը պահում է բաժանորդագրությունների, փորձաշրջանների և գնումների փակ ծառայողական հաշվետվություններ։ Telegram-ի միջոցով մշակողին կարող են ուղարկվել սահմանափակ ծանուցումներ՝ գնորդի պայմանական համար կամ իրադարձության կոդ, սակագին, Apple-ի տրամադրած գումարն ու արժույթը, App Store-ի երկիրը, ամսաթվերը և երկարաձգման կարգավիճակը։ Դրանք չեն պարունակում ձեր Apple ID-ն, անունը, էլ․ հասցեն, վճարային տվյալները կամ ստեղնաշարի տեքստը։ Գնումների ծառայության այս մշակումը առանձին է հավելվածի կամավոր վիճակագրությունից և չի կառավարվում դրա անջատիչով։</p>
+      </div>
+
+      <div class="policy-item">
         <h3>Ծառայություններ մատուցողներ և միջազգային մշակում</h3>
-        <p>Կախված ձեր ընտրած գործառույթից՝ տվյալները կարող են մշակվել Apple-ի (StoreKit, APNs և iCloud Drive), Google/Firebase/Google Cloud-ի (ծանուցումներ, ծառայությունների հոսթինգ, սահմանաչափերի կիրառում և գնումների ստուգում), Google Apps Script-ի և էլփոստային ծառայությունների (հետադարձ կապ), ինչպես նաև Yandex Cloud Translate-ի (թարգմանություն) կողմից։ Մշակումը կարող է կատարվել ձեր երկրից դուրս։ Մենք այս ծառայություններն օգտագործում ենք միայն վերը նկարագրված գործառույթներն ապահովելու համար և պահանջում ենք, որ նրանք տվյալները պաշտպանեն այս քաղաքականությանը և կիրառելի օրենսդրությանը համապատասխան։ Մենք նրանց թույլ չենք տալիս ստեղնաշարի տեքստը կամ ներկայացված այլ բովանդակությունն օգտագործել iBuben-ի գովազդի կամ տարբեր հավելվածներում օգտատերերին հետևելու համար։</p>
+        <p>Կախված ձեր ընտրած գործառույթից՝ տվյալները կարող են մշակվել Apple-ի (StoreKit, APNs և iCloud Drive), Google/Firebase/Google Cloud-ի (լեզուների ներբեռնում, ծանուցումներ, ծառայությունների հոսթինգ, սահմանաչափերի կիրառում և գնումների ստուգում), Google Apps Script-ի և էլփոստային ծառայությունների (հետադարձ կապ), Yandex Cloud Translate-ի (թարգմանություն), PostHog EU-ի (հավելվածի կամընտիր վիճակագրություն) և Telegram-ի (գնումների ծառայության փակ ծանուցումներ) կողմից։ Մշակումը կարող է կատարվել ձեր երկրից դուրս։ Մենք այս ծառայություններն օգտագործում ենք միայն վերը նկարագրված գործառույթներն ապահովելու համար նրանց կիրառելի պայմանների և տվյալների մշակման կանոնների համաձայն։ Մենք նրանց թույլ չենք տալիս ստեղնաշարի տեքստը կամ ներկայացված այլ բովանդակությունն օգտագործել iBuben-ի գովազդի կամ տարբեր հավելվածներում օգտատերերին հետևելու համար։</p>
       </div>
 
       <div class="policy-item">
         <h3>Պահպանում, ջնջում և ձեր ընտրությունները</h3>
-        <p>Դուք կարող եք հավելվածում ջնջել սովորած բառերն ու զրոյացնել ստեղնաշարի տվյալները, ձեր ընտրած վայրից ջնջել պահուստային ֆայլերը, iBuben-ում անջատել Թարգմանիչը կամ ծանուցումները, իսկ iOS-ի Կարգավորումներում փոխել «Full Access»-ի, Photos-ի և ծանուցումների թույլտվությունները։ Հետադարձ կապով ուղարկված տվյալները պահվում են միայն այնքան ժամանակ, որքան ողջամտորեն անհրաժեշտ է պատասխանելու, խնդիրը լուծելու և անվտանգության կամ իրավական պահանջները կատարելու համար։</p>
+        <p>Դուք կարող եք հավելվածում ջնջել սովորած բառերն ու զրոյացնել ստեղնաշարի տվյալները, ձեր ընտրած վայրից ջնջել պահուստային ֆայլերը, iBuben-ում անջատել Թարգմանիչը, ծանուցումները կամ հավելվածի վիճակագրությունը, իսկ iOS-ի Կարգավորումներում փոխել «Full Access»-ի, Photos-ի և ծանուցումների թույլտվությունները։ Հետադարձ կապով ուղարկված տվյալները պահվում են միայն այնքան ժամանակ, որքան ողջամտորեն անհրաժեշտ է պատասխանելու, խնդիրը լուծելու և անվտանգության կամ իրավական պահանջները կատարելու համար։</p>
         <p>iBuben-ի վերահսկողության տակ գտնվող տվյալների վերաբերյալ կարող եք հարց տալ կամ դրանց ջնջումը խնդրել՝ գրելով <a href="mailto:ibuben.support@gmail.com">ibuben.support@gmail.com</a> հասցեին։ Որոշ տեղեկություններ կարող են անհրաժեշտ լինել պահպանել՝ գնման կամ փորձաշրջանի ամբողջականությունն ապահովելու, հարցումը կատարելու, չարաշահումը կանխելու կամ օրենքի պահանջները պահպանելու համար։ Apple-ի, Google-ի, Yandex-ի, ձեր էլփոստային ծառայության, Files-ի կամ iCloud-ի վերահսկողության տակ գտնվող տվյալները պետք է կառավարեք նաև այդ ծառայության գործիքներով։ Գաղտնիության հարցման մեջ մի ուղարկեք ստեղնաշարով մուտքագրած տեքստ կամ վճարային տվյալներ։</p>
+      </div>
+
+      <div class="policy-item">
+        <h3>Այս քաղաքականության վեբ-էջը</h3>
+        <p>Այս էջը տեղակայված է GitHub Pages-ում։ Այն բացելիս GitHub-ը ստանում է ցանցային հարցման սովորական տվյալներ՝ ներառյալ IP հասցեն։ Էջը զննարկչի տեղային պահոցում պահում է միայն ընտրված լեզուն և չի պարունակում iBuben-ի վերլուծական սկրիպտ։ GitHub-ի ծառայողական տվյալների մշակումը նկարագրված է <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">նրա գաղտնիության քաղաքականությունում</a>։</p>
       </div>
 
       <div class="policy-item">
@@ -497,7 +547,8 @@
       <div class="language-label">Русский</div>
       <h2 id="russian-policy">Политика конфиденциальности</h2>
       <p>Эта политика относится к основному приложению iBuben, расширению клавиатуры iBuben и вспомогательным сервисам, описанным ниже.</p>
-      <p>Для iBuben не требуется отдельная учётная запись пользователя. iBuben не продаёт персональные данные, не показывает стороннюю рекламу, не отслеживает вас в других приложениях или на сайтах и не включает сторонние SDK для аналитики.</p>
+      <p>Оператор iBuben — Albert Harutyunyan, индивидуальный предприниматель, зарегистрированный в Армении. Он отвечает за описанную в этой политике обработку данных. По вопросам конфиденциальности и запросам напишите на <a href="mailto:ibuben.support@gmail.com">ibuben.support@gmail.com</a>.</p>
+      <p>Для iBuben не требуется отдельная учётная запись пользователя. iBuben не продаёт персональные данные, не показывает стороннюю рекламу и не отслеживает вас в других приложениях или на сайтах. Необязательная статистика приложения описана ниже.</p>
 
       <div class="policy-item">
         <h3>Клавиатура, «Полный доступ» и данные на устройстве</h3>
@@ -505,6 +556,12 @@
         <p>«Полный доступ» необязателен. Он не требуется для обычного ввода, доступных клавиатуре локальных настроек и подтверждённого премиум-доступа. Он нужен только функциям, которым необходимо записывать данные в общий локальный контейнер или обращаться к сети, например для сохранения запомненных или добавленных с клавиатуры слов, тактильного отклика и отправки запроса на перевод после вашего явного действия. Само предоставление «Полного доступа» не передаёт текст.</p>
         <p>Запомненные слова, записи личного словаря, ключевые слова и текстовые сокращения, частота использования слов, недавние emoji, а также настройки раскладки, оформления клавиш, жестов, символов и Переводчика могут храниться локально на вашем устройстве. Они используются для работы и персонализации клавиатуры и не загружаются на наши серверы.</p>
         <p>Резервные копии словаря и ключевых слов создаются или импортируются только тогда, когда вы явно выбираете действие и место в приложении «Файлы» или iCloud Drive. iBuben не загружает эти файлы разработчику или в Firebase автоматически. При выборе iCloud Drive файл обрабатывается Apple в соответствии с вашими настройками iCloud и условиями конфиденциальности Apple.</p>
+      </div>
+
+      <div class="policy-item">
+        <h3>Загрузка языков и функции на устройстве</h3>
+        <p>При загрузке или обновлении языкового пакета приложение запрашивает общедоступные словари и сведения об обновлениях из Google Firebase Storage. Сервис размещения получает обычные данные запроса, включая IP-адрес и запрошенный файл, по которому можно определить выбранный языковой пакет. При загрузке не отправляются введённый текст, запомненные слова или личный словарь. Установленные словари и подсказки клавиатуры обрабатываются на устройстве.</p>
+        <p>Там, где доступны AI Rewrite и AI Emojis, они используют модель Apple на устройстве. Выбранный вами текст и необходимый контекст обрабатываются локально; iBuben не отправляет их во внешний AI-сервис и не хранит историю на сервере. Выражения и результаты калькулятора клавиатуры также обрабатываются на устройстве.</p>
       </div>
 
       <div class="policy-item">
@@ -516,8 +573,16 @@
       </div>
 
       <div class="policy-item">
+        <h3>Необязательная статистика приложения</h3>
+        <p>Статистика приложения по умолчанию выключена. Там, где эта возможность доступна, пользователи от 18 лет могут включить её, чтобы помочь улучшать iBuben. Отказ не ограничивает функции приложения или клавиатуры. До включения статистика не отправляется в PostHog, а прошлые действия не сохраняются для последующей отправки.</p>
+        <p>Статистика касается только основного приложения iBuben: открытых разделов, небольшого набора нажатий на кнопки, завершения начальной настройки и округлённого времени, пока приложение открыто на экране. В неё никогда не входят действия в клавиатуре, введённый текст, сообщения, содержимое буфера обмена, запомненные слова, переводы, содержимое обращений, фотографии, платёжные данные или другое чувствительное содержимое. Мы не создаём личные профили и не записываем экран.</p>
+        <p>PostHog EU обрабатывает эту ограниченную статистику по нашему поручению для улучшения приложения. Каждое событие получает новый случайный технический код без общего идентификатора пользователя, устройства или сеанса. Страна магазина App Store проверяется для доступности функции и включается в события как обозначение рынка; это не ваше физическое местоположение. Мы не отправляем рекламные идентификаторы, постоянные идентификаторы устройства или GPS-координаты. При передаче запроса сетевые сервисы неизбежно получают ваш IP-адрес; сохранение IP-адресов в статистике и определение местоположения по ним отключены.</p>
+        <p>Статистику приложения можно в любой момент выключить в разделе «О iBuben». Это прекращает дальнейший сбор и отправку и удаляет ещё не отправленные события с устройства. Уже полученные события при этом автоматически не удаляются. Статистика хранится только столько, сколько разумно необходимо для понимания и улучшения приложения. Запросить удаление можно через «Связь с разработчиком» или по указанной ниже электронной почте; поскольку события не связаны с вашим именем или учётной записью, мы можем не найти конкретное прошлое событие.</p>
+      </div>
+
+      <div class="policy-item">
         <h3>Необязательные уведомления</h3>
-        <p>Если вы согласитесь получать уведомления, основное приложение будет использовать Firebase Cloud Messaging (FCM) и службу push-уведомлений Apple (APNs), чтобы изредка присылать новости и полезные советы. Эти службы обрабатывают токен APNs, идентификатор установки приложения Firebase и технические данные, необходимые для адресации, доставки и диагностики уведомлений: модель устройства, язык, часовой пояс, версию операционной системы, идентификатор и версию приложения. FCM также может обрабатывать не связанные с личностью сведения о доставке и диагностике. Firebase Analytics не включён. Расширение клавиатуры не использует SDK Firebase для уведомлений или аналитики, а службы уведомлений не получают текст клавиатуры, запомненные слова, подсказки, содержимое буфера обмена или сведения об использовании клавиатуры.</p>
+        <p>Если вы согласитесь получать уведомления, основное приложение будет использовать Firebase Cloud Messaging (FCM) и службу push-уведомлений Apple (APNs), чтобы изредка присылать новости и полезные советы. Эти службы обрабатывают токен APNs, идентификатор установки приложения Firebase и технические данные, необходимые для адресации, доставки и диагностики уведомлений: модель устройства, язык, часовой пояс, версию операционной системы, идентификатор и версию приложения. FCM также может обрабатывать не связанные с личностью сведения о доставке и диагностике. Модуль Firebase Analytics подключён только в основном приложении, а сбор данных отключён. Расширение клавиатуры не использует SDK Firebase для уведомлений или аналитики, а службы уведомлений не получают текст клавиатуры, запомненные слова, подсказки, содержимое буфера обмена или сведения об использовании клавиатуры.</p>
         <p>Уведомления необязательны. Их можно отключить в iBuben или настройках iOS. После отказа в iBuben приложение отключает обмен сообщениями и запрашивает удаление регистрационного токена FCM и подписки на тему. Если устройство временно не подключено к сети, очистка будет повторена позже.</p>
       </div>
 
@@ -530,21 +595,31 @@
       <div class="policy-item">
         <h3>Покупки, подписки и премиум-доступ</h3>
         <p>Покупки и подписки обрабатываются Apple через StoreKit. iBuben не получает ваш Apple ID, данные платёжной карты или банковского счёта и другие платёжные реквизиты.</p>
-        <p>Подходящим пользователям также может предоставляться однократный 7-дневный App Trial. App Trial предоставляется iBuben отдельно от вводного предложения подписки Apple, начинается только после явного выбора пользователя, не создаёт покупку или подписку, не списывает деньги и не продлевается автоматически. Подписка Yearly и покупка Lifetime остаются отдельными встроенными покупками Apple. Если Apple отдельно показывает вводное предложение для Yearly, оно является частью подписки, а условия оплаты и продления отображаются в окне подтверждения Apple.</p>
+        <p>Подходящим пользователям также может предоставляться однократный 7-дневный App Trial. App Trial предоставляется iBuben отдельно от вводного предложения подписки Apple, начинается только после явного выбора пользователя, не создаёт покупку или подписку, не списывает деньги и не продлевается автоматически. Подписки, в том числе Monthly и Yearly, и покупка Lifetime остаются отдельными встроенными покупками Apple. Если Apple отдельно показывает вводное предложение для Yearly, оно является частью подписки, а условия оплаты и продления отображаются в окне подтверждения Apple.</p>
         <p>Для определения права на App Trial, проверки премиум-доступа, восстановления покупок и обработки продлений, состояния оплаты, возвратов или отзывов доступа основное приложение и сервис проверки покупок iBuben могут обрабатывать подписанные Apple данные App Transaction, транзакций, продлений и App Store Server Notification. Они могут включать созданные Apple идентификаторы транзакции приложения, транзакции и исходной транзакции; идентификатор продукта; среду App Store; даты покупки и окончания; сведения о льготном периоде, оплате, типе владения и отзыве доступа; а также статус обработки уведомления. Сервис размещён в Google Cloud/Firebase и может обращаться к App Store Server API Apple. Эти записи не содержат текст клавиатуры, Apple ID, рекламные идентификаторы, платёжные реквизиты или цифровой отпечаток устройства.</p>
         <p>Право на App Trial связывается с подтверждённым Apple идентификатором транзакции приложения для Apple Account, используемой в разделе «Медиаматериалы и покупки». iBuben получает подписанный Apple идентификатор уровня учётной записи, но не Apple ID, имя или адрес электронной почты. Это позволяет сохранять историю App Trial той же учётной записи после переустановки приложения и при переходе на другое устройство.</p>
         <p>Сведения об истории покупок и пробного периода хранятся столько, сколько разумно необходимо для предоставления и восстановления доступа, сохранения права и истории использования App Trial и истории любых предложений Apple, обработки продлений, возвратов и отзывов, предотвращения мошенничества или повторного использования пробного периода, а также выполнения требований безопасности и закона. Удаление или повторная установка приложения не удаляет историю покупок Apple и эти необходимые записи о доступе. Отмена подписки и управление историей покупок Apple выполняются через Apple.</p>
       </div>
 
       <div class="policy-item">
+        <h3>Служебные отчёты о покупках</h3>
+        <p>Сервис покупок ведёт закрытые служебные отчёты о подписках, пробных периодах и покупках. Разработчику могут поступать ограниченные уведомления через Telegram: условный номер покупателя или код события, тариф, сумма и валюта при наличии у Apple, страна магазина App Store, даты и состояние продления. Они не содержат ваш Apple ID, имя, email, платёжные реквизиты или текст клавиатуры. Эта обработка сервиса покупок отделена от добровольной статистики использования приложения и не управляется её переключателем.</p>
+      </div>
+
+      <div class="policy-item">
         <h3>Поставщики услуг и международная обработка</h3>
-        <p>В зависимости от выбранной функции данные могут обрабатываться Apple (StoreKit, APNs и iCloud Drive), Google/Firebase/Google Cloud (уведомления, размещение сервисов, применение лимитов и проверка покупок), Google Apps Script и почтовыми сервисами (обратная связь), а также Yandex Cloud Translate (перевод). Обработка может происходить за пределами вашей страны. Мы используем этих поставщиков только для предоставления описанных выше функций и требуем, чтобы они защищали данные в соответствии с этой политикой и применимым законодательством. Мы не разрешаем использовать текст клавиатуры или другое отправленное содержимое для рекламы iBuben или отслеживания пользователей в разных приложениях.</p>
+        <p>В зависимости от выбранной функции данные могут обрабатываться Apple (StoreKit, APNs и iCloud Drive), Google/Firebase/Google Cloud (загрузка языков, уведомления, размещение сервисов, применение лимитов и проверка покупок), Google Apps Script и почтовыми сервисами (обратная связь), Yandex Cloud Translate (перевод), PostHog EU (необязательная статистика приложения) и Telegram (закрытые уведомления сервиса покупок). Обработка может происходить за пределами вашей страны. Мы используем этих поставщиков только для предоставления описанных выше функций с учётом применимых условий этих сервисов и правил обработки данных. Мы не разрешаем использовать текст клавиатуры или другое отправленное содержимое для рекламы iBuben или отслеживания пользователей в разных приложениях.</p>
       </div>
 
       <div class="policy-item">
         <h3>Хранение, удаление и ваш выбор</h3>
-        <p>Вы можете удалить запомненные слова и сбросить данные клавиатуры в приложении, удалить резервные копии из выбранного места, отключить Переводчик или уведомления в iBuben, а также изменить разрешения для «Полного доступа», приложения «Фото» и уведомлений в настройках iOS. Данные, отправленные через форму обратной связи, хранятся только столько, сколько разумно необходимо для ответа, решения проблемы и выполнения требований безопасности или закона.</p>
+        <p>Вы можете удалить запомненные слова и сбросить данные клавиатуры в приложении, удалить резервные копии из выбранного места, отключить Переводчик, уведомления или статистику приложения в iBuben, а также изменить разрешения для «Полного доступа», приложения «Фото» и уведомлений в настройках iOS. Данные, отправленные через форму обратной связи, хранятся только столько, сколько разумно необходимо для ответа, решения проблемы и выполнения требований безопасности или закона.</p>
         <p>Задать вопрос или запросить удаление данных, находящихся под контролем iBuben, можно по адресу <a href="mailto:ibuben.support@gmail.com">ibuben.support@gmail.com</a>. Некоторые сведения могут потребоваться для сохранения целостности покупок или пробного периода, выполнения запроса, предотвращения злоупотреблений или соблюдения закона. Данные, которыми управляют Apple, Google, Yandex, ваш почтовый сервис, «Файлы» или iCloud, необходимо также контролировать средствами соответствующего поставщика. Не отправляйте в запросе о конфиденциальности текст, набранный на клавиатуре, или платёжные реквизиты.</p>
+      </div>
+
+      <div class="policy-item">
+        <h3>Веб-страница этой политики</h3>
+        <p>Эта страница размещена на GitHub Pages. При открытии GitHub получает обычные данные сетевого запроса, включая IP-адрес. Сама страница сохраняет в локальном хранилище браузера только выбранный язык и не содержит скрипта аналитики iBuben. Обработка служебных данных GitHub описана в <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">его политике конфиденциальности</a>.</p>
       </div>
 
       <div class="policy-item">
@@ -574,9 +649,9 @@
           privacySummaryLabel: "Privacy summary",
           typingTitle: "Your typing stays private",
           typingBody: "Ordinary keyboard input stays on your device; only text you explicitly submit to the optional Translator is sent.",
-          lastUpdated: "Last updated: September 11, 2026",
-          trackingTitle: "No tracking or advertising",
-          trackingBody: "iBuben does not use advertising, tracking, or third-party analytics SDKs.",
+          lastUpdated: "Last updated: October 26, 2026",
+          trackingTitle: "App statistics are your choice",
+          trackingBody: "Optional app statistics start only if you turn them on. No advertising or tracking across apps.",
           supportChoiceTitle: "Support is your choice",
           supportChoiceBody: "Contact information is sent only when you choose to submit feedback or ask for help.",
           supportTitle: "Support",
@@ -592,9 +667,9 @@
           privacySummaryLabel: "Գաղտնիության համառոտ նկարագրություն",
           typingTitle: "Ձեր մուտքագրածը մնում է գաղտնի",
           typingBody: "Սովորական մուտքագրումը մնում է ձեր սարքում․ ցանցով ուղարկվում է միայն այն տեքստը, որը դուք հստակ ներկայացնում եք կամընտիր Թարգմանիչին։",
-          lastUpdated: "Վերջին թարմացումը՝ 2026 թ. սեպտեմբերի 11",
-          trackingTitle: "Առանց հետևման և գովազդի",
-          trackingBody: "iBuben-ը չի օգտագործում գովազդ, հետևում կամ երրորդ կողմի վերլուծական SDK-ներ։",
+          lastUpdated: "Վերջին թարմացումը՝ 2026 թ. հոկտեմբերի 26",
+          trackingTitle: "Հավելվածի վիճակագրությունը ձեր ընտրությունն է",
+          trackingBody: "Հավելվածի կամընտիր վիճակագրությունն սկսվում է միայն ձեր միացնելուց հետո։ Առանց գովազդի կամ տարբեր հավելվածներում հետևման։",
           supportChoiceTitle: "Աջակցությունը ձեր ընտրությունն է",
           supportChoiceBody: "Կոնտակտային տվյալներն ուղարկվում են միայն այն ժամանակ, երբ դուք ընտրում եք հետադարձ կապ ուղարկել կամ օգնություն խնդրել։",
           supportTitle: "Աջակցություն",
@@ -610,9 +685,9 @@
           privacySummaryLabel: "Кратко о конфиденциальности",
           typingTitle: "Введённый текст остаётся конфиденциальным",
           typingBody: "Обычный ввод остаётся на устройстве; по сети передаётся только текст, который вы явно отправляете через необязательный Переводчик.",
-          lastUpdated: "Последнее обновление: 11 сентября 2026 г.",
-          trackingTitle: "Без отслеживания и рекламы",
-          trackingBody: "iBuben не использует рекламу, отслеживание или сторонние SDK для аналитики.",
+          lastUpdated: "Последнее обновление: 26 октября 2026 г.",
+          trackingTitle: "Статистика приложения — ваш выбор",
+          trackingBody: "Необязательная статистика приложения включается только по вашему выбору. Без рекламы и отслеживания в других приложениях.",
           supportChoiceTitle: "Обращение в поддержку — ваш выбор",
           supportChoiceBody: "Контактные данные отправляются только тогда, когда вы сами решаете оставить отзыв или обратиться за помощью.",
           supportTitle: "Поддержка",
